@@ -16,11 +16,13 @@ class StaticOuter {
 		System.out.println(StaticInner.s);
 		StaticOuter so = new StaticOuter();
 		so.seeStaticInner();
+		System.out.println(new StaticInner().s2);
 	}
 	
 	static class StaticInner {
 		String nonstatic = "StaticInner nonstatic string";
 		static String s = "StaticInner static string";
+		private String s2 = "Hello";
 		
 		public static void main(String[] args) {
 			// System.out.println(nonstatic); Cannot access non static variables from static methods
